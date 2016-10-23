@@ -14,7 +14,7 @@ public class EMailAdressBuch {
     }
 
     /**
-     * Fügt einen neuen Kontakt zum Adressbuch hinzu
+     * Fuegt einen neuen Kontakt zum Adressbuch hinzu
      * oder aktuallisiert die E-Mail-Adresse eines Kontakts.
      * @param name der Name des Kontakts
      * @param email die Email Adresse des Kontakts

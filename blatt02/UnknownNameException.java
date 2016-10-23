@@ -1,7 +1,6 @@
-
 public class UnknownNameException extends RuntimeException {
 
-	public UnknownNameException(String s) {
-		super(s);
-	}
+    public UnknownNameException(String s) {
+        super(s);
+    }
 }
