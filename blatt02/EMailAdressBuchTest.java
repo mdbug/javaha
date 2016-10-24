@@ -16,7 +16,6 @@ public class EMailAdressBuchTest {
         
         EMailAdressBuch matseEmails = new EMailAdressBuch();
         try {
-            //FIXME
             URL urlIntern = new URL("https://doc.itc.rwth-aachen.de/download/attachments/5800183/mitarbeiter_matse_intern.txt");
             URL urlExtern = new URL("https://doc.itc.rwth-aachen.de/download/attachments/5800183/mitarbeiter_matse_extern.txt");
             matseEmails.mitarbeiterEinlesen(urlIntern);
