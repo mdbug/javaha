@@ -1,4 +1,3 @@
-
 /**
  * @author Michael von Bothmer
  * @author Andreas Braining
@@ -41,9 +40,8 @@ public class MyArrayList {
      * @param pos
      *            der Index des Elements
      * @return das Element an der angegebenen Stelle
-     * @throws Wirft
-     *             eine ArrayIndexOutOfBoundsException, falls pos nicht zwischen
-     *             0 und size liegt.
+     * @throws ArrayIndexOutOfBoundsException
+     *             , falls pos nicht zwischen 0 und size liegt.
      */
     public int get(int pos) throws ArrayIndexOutOfBoundsException {
         return arr[pos];
@@ -56,9 +54,9 @@ public class MyArrayList {
      */
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
-        for (int i=0; i<size; i++) {
+        for (int i = 0; i < size; i++) {
             sb.append(arr[i]);
-            if (i<size-1) {
+            if (i < size - 1) {
                 sb.append(",");
             }
         }
@@ -112,8 +110,8 @@ public class MyArrayList {
      *            das Element das eingefuegt werden soll
      * @param pos
      *            die Position, an die das Element eingefuegt werden soll
-     * @throws ArrayIndexOutOfBoundsException,
-     *             falls pos nicht zwischen 0 und size liegt.
+     * @throws ArrayIndexOutOfBoundsException
+     *             , falls pos nicht zwischen 0 und size liegt.
      */
     public void add(int i, int pos) throws ArrayIndexOutOfBoundsException {
         if (pos < 0 || pos > size) {
@@ -136,8 +134,8 @@ public class MyArrayList {
      * 
      * @param pos
      *            die Position des Elements das geloescht werden soll
-     * @throws ArrayIndexOutOfBoundsException,
-     *             falls pos nicht zwischen 0 und size liegt.
+     * @throws ArrayIndexOutOfBoundsException
+     *             , falls pos nicht zwischen 0 und size liegt.
      */
     public void delete(int pos) {
         if (pos < 0 || pos > size) {
