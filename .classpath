@@ -5,5 +5,6 @@
 	<classpathentry kind="src" path="blatt02"/>
 	<classpathentry kind="src" path="blatt03"/>
 	<classpathentry kind="src" path="blatt04"/>
+	<classpathentry kind="src" path="blatt05"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

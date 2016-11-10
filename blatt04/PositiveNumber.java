@@ -8,78 +8,51 @@ public class PositiveNumber {
     private int value;
 
     /**
-<<<<<<< HEAD
-     * @param s
-     * @throws NumberFormatException
-=======
      * Die als String uebergebene Dezimalzahl wird gesetzt
      * @param s eine Dezimalzahl als String
      * @throws NumberFormatException falls der String keine gueltige Dezimalzahl repraesentiert
->>>>>>> branch 'master' of https://github.com/mdbug/javaha
      */
     public void setDecimal(String s) throws NumberFormatException {
         setValue(s, 10);
     }
 
     /**
-<<<<<<< HEAD
-     * @param s
-     * @throws NumberFormatException
-=======
      * Die als String uebergebene Hexadezimalzahl wird gesetzt
      * @param s eine Hexadezimalzahl als String
      * @throws NumberFormatException falls der String keine gueltige Hexadezimalzahl repraesentiert
->>>>>>> branch 'master' of https://github.com/mdbug/javaha
      */
     public void setHexadecimal(String s) throws NumberFormatException {
         setValue(s, 16);
     }
 
     /**
-<<<<<<< HEAD
-     * @param s
-     * @throws NumberFormatException
-=======
      * Die als String uebergebene Binaerzahl wird gesetzt
      * @param s eine Binaerzahl als String
      * @throws NumberFormatException falls der String keine gueltige Binaerzahl repraesentiert
->>>>>>> branch 'master' of https://github.com/mdbug/javaha
      */
     public void setBinary(String s) throws NumberFormatException {
         setValue(s, 2);
     }
 
     /**
-<<<<<<< HEAD
-     * @return
-=======
      * Gibt die Zahl im Dezimalsystem als String zurueck
      * @return die Zahl im Dezimalsystem als String 
->>>>>>> branch 'master' of https://github.com/mdbug/javaha
      */
     public String getDecimal() {
         return getValue(10);
     }
 
     /**
-<<<<<<< HEAD
-     * @return
-=======
      * Gibt die Zahl im Hexadezimalsystem als String zurueck
      * @return die Zahl im Hexadezimalsystem als String 
->>>>>>> branch 'master' of https://github.com/mdbug/javaha
      */
     public String getHexadecimal() {
         return getValue(16);
     }
 
     /**
-<<<<<<< HEAD
-     * @return
-=======
      * Gibt die Zahl im Binaersystem als String zurueck
      * @return die Zahl im Binaersystem als String 
->>>>>>> branch 'master' of https://github.com/mdbug/javaha
      */
     public String getBinary() {
         return getValue(2);
