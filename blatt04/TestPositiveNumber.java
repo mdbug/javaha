@@ -9,5 +9,5 @@ public class TestPositiveNumber {
         zs.setBinary("1000101011");
         System.out.println("Hexadezimal: " + zs.getHexadecimal());
     }
-
+ 
 }
