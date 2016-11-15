@@ -1,6 +1,9 @@
 /**
  * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
  *
+ * Das Interface stellt eine Rechenoperation dar
  */
 public interface Rechenoperation {
     /**
