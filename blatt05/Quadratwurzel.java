@@ -12,5 +12,4 @@ public class Quadratwurzel implements Rechenoperation {
             throw new ArithmeticException();
         return Math.sqrt(x);
     }
-
 }

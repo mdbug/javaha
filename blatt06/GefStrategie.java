@@ -1,9 +1,14 @@
 /**
- * Created by abraining on 16.11.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
+ * Das Interface stellt eine Gefangenen-Dilemma-Strategie dar
  */
 public interface GefStrategie {
     /**
      * gibt die nächste eigene Spielentscheidung zurück
+     *
      * @return eigene Entschediung
      */
     public boolean getNextDecision();
@@ -11,7 +16,8 @@ public interface GefStrategie {
 
     /**
      * dem Spieler wird der letzte Zug des Gegners mitgeteilt
-     * @param decision letzter Zug des Gegners
+     *
+     * @param decision letzter Zug des Gegners (true = Betrug, false = Kooperation)
      */
-    public void setOpponentsLastDecision(boolean decision); //true => Verrat
+    public void setOpponentsLastDecision(boolean decision);
 }
