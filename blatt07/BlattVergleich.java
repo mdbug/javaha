@@ -4,6 +4,14 @@ import java.util.Comparator;
  * Created by abraining on 23.11.2016.
  */
 public class BlattVergleich implements Comparator<Blatt> {
+    /**
+     * compare(Blatt o1, Blatt o2) vergleicht das Blatt o1 mit o2
+     * @param o1 Blatt von dem ausgegangen wird
+     * @param o2 Blatt mit dem verglichen wird
+     * @return wenn o1 einen höheren Wert als o2 hat, wird 1 zurückgegeben
+     * wenn o1 einen niedrigeren Wert als o2 hat, wird -1 zurückgegeben
+     * wenn o1 und o2 äquivalent sind, dann wird 0 ausgegeben
+     */
     @Override
     public int compare(Blatt o1, Blatt o2) {
         //Drilling Handling
