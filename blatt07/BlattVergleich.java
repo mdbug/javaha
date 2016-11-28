@@ -1,7 +1,10 @@
 import java.util.Comparator;
 
 /**
- * Created by abraining on 23.11.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
  */
 public class BlattVergleich implements Comparator<Blatt> {
     /**
@@ -15,8 +18,10 @@ public class BlattVergleich implements Comparator<Blatt> {
     @Override
     public int compare(Blatt o1, Blatt o2) {
         //Drilling Handling
-        if(o1.isDrilling() && !o2.isDrilling()) return 1; //o1 Drilling, o2 nicht
-        else if(!o1.isDrilling() && o2.isDrilling()) return -1; //o1 kein Drilling, o2 doch
+        if(o1.isDrilling() && !o2.isDrilling())
+            return 1; //o1 Drilling, o2 nicht
+        else if(!o1.isDrilling() && o2.isDrilling())
+            return -1; //o1 kein Drilling, o2 doch
         //---------------------------------------------------------
         //Paar Handling
         else if(o1.isPaar() && o2.isPaar()){ //untershiedliche Paare

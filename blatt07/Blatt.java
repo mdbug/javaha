@@ -1,24 +1,29 @@
 import java.util.Arrays;
 
 /**
- * Created by abraining on 23.11.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
  */
 public class Blatt {
-    /**
-     * karten verwaltet das eigene Blatt
-     */
+
     private int[] blatt = new int[3];
 
     /**
-     * erzeugt ein Blatt-Objekt mit einem gueltigen Blatt als Attribut
+     * Erzeugt ein Blatt-Objekt mit einem gueltigen Blatt als Attribut
      * @param blatt
      */
     public Blatt(int[] blatt){
-        boolean werteOk = true;
-        for(int a : blatt) werteOk = ((2 <= a) && (a <= 14));
-        if(!werteOk && blatt.length != 3) throw new ArithmeticException("Kartenwerte falsch oder zu viele, bzw. nicht genug Karten");
+        if (blatt.length != 3)
+            throw new ArithmeticException("Nicht genau drei Karten");
+        for(int b : blatt) {
+            if (b < 2 || b > 14) {
+                throw new ArithmeticException("Ungueltige Karte");
+            }
+        }
 
-        this.blatt = blatt;
+        this.blatt = blatt.clone();
     }
 
     /**
@@ -38,7 +43,7 @@ public class Blatt {
     }
 
     /**
-     * getBlatt() gibt das eigene Blatt
+     * getBlatt() gibt das eigene Blatt zurueck
      * @return eigenes Blatt
      */
     public int[] getBlatt(){
@@ -58,11 +63,11 @@ public class Blatt {
     }
 
     /**
-     * toString() gibt das eigene Blatt im String-Format aus
-     * @return eigenes Blatt als String zurück
+     * toString() gibt das eigene Blatt im String-Format zurueck
+     * @return eigenes Blatt als String zurueck
      */
     public String toString(){
         String temp = Arrays.toString(blatt);
-        return temp.substring(1,temp.length()-1);
+        return temp.substring(1, temp.length() - 1);
     }
 }
