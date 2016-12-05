@@ -2,7 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by micha on 01.12.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
+ * Die Klasse stellt ein Schiebepuzzle dar
  */
 public class Schiebepuzzle {
     private final int WIDTH = 4;
@@ -14,6 +18,9 @@ public class Schiebepuzzle {
     private int[] plaettchenX;
     private int[] plaettchenY;
 
+    /**
+     * Konstruiert ein Schiebepuzzle, in dem die Zahlen richtig angeordnet sind
+     */
     public Schiebepuzzle() {
         feld = new int[HEIGHT][WIDTH];
         plaettchenX = new int[SIZE];
@@ -32,6 +39,12 @@ public class Schiebepuzzle {
         feld[HEIGHT-1][WIDTH-1] = 0;
     }
 
+    /**
+     * Die Methode schiebt das Plaettchen mit der Nummer i auf den freien Platz.
+     * @param i das Plaettchen, welches verschoben werden soll
+     * @throws WrongNumberException falls das Plaettchen nicht existiert
+     * @throws WrongMoveException falls der Zug nicht moeglich ist
+     */
     public void schiebe(int i) {
         if (i < 1 || i >= SIZE)
             throw new WrongNumberException();
@@ -48,6 +61,11 @@ public class Schiebepuzzle {
         feld[plaettchenY[EMPTY]][plaettchenX[EMPTY]] = 0;
     }
 
+    /**
+     * Prueft ob das Plaettchen verschiebbar ist
+     * @param i die Nummer des Plaettchens
+     * @return true, falls das Plaettchen verschiebar ist. false, sonst.
+     */
     public boolean istVerschiebbar(int i) {
         if (i < 1 || i >= SIZE)
             throw new WrongNumberException();
@@ -55,6 +73,10 @@ public class Schiebepuzzle {
         return (Math.abs(plaettchenX[i] - plaettchenX[EMPTY]) + Math.abs(plaettchenY[i] - plaettchenY[EMPTY])) == 1;
     }
 
+    /**
+     * Gibt eine Liste aller Plaettchen zurueck, die verschiebbar sind
+     * @return eine Liste aller verschiebarer Plaettchen
+     */
     public List<Integer> getVerschiebbarePlaettchen() {
         List<Integer> list = new ArrayList<>();
         if (plaettchenX[EMPTY] > 0)
@@ -69,6 +91,9 @@ public class Schiebepuzzle {
         return list;
     }
 
+    /**
+     * Die Methode mischt das Spiel, indem 100 zufaellige (gueltige) Zuege durchgefuehrt werden.
+     */
     public void mische() {
         final int ZUEGE = 100;
         for (int i = 0; i < ZUEGE; ++i) {
@@ -78,18 +103,36 @@ public class Schiebepuzzle {
         }
     }
 
+    /**
+     * Gibt die x-Position des Plaettchens zurueck
+     * @param i die Nummer des Plaettchens
+     * @return die x-Koordinate des Plaettchens
+     */
     public int getPlaettchenX(int i) {
         return plaettchenX[i];
     }
 
+    /**
+     * Gibt die y-Position des Plaettchens zurueck
+     * @param i die Nummer des Plaettchens
+     * @return die y-Koordinate des Plaettchens
+     */
     public int getPlaettchenY(int i) {
         return plaettchenX[i];
     }
 
+    /**
+     * Gibt die Positon des Plaettchens zurueck. Von oben links (=0) bis unten rechts.
+     * @param i das Plaettchen
+     * @return die Position des Plaettchens
+     */
     public int getPlaettchenPosition(int i) {
         return plaettchenY[i] * WIDTH + plaettchenX[i];
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public String toString() {
         StringBuilder s = new StringBuilder();
         for (int y = 0; y < HEIGHT; ++y) {

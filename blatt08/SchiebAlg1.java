@@ -1,7 +1,10 @@
 import java.util.List;
 
 /**
- * Created by michael on 03.12.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
  */
 public class SchiebAlg1 implements Loesungsalgorithmus {
     @Override
