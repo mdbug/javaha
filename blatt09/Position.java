@@ -1,5 +1,9 @@
 /**
- * Created by michael on 09.12.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
+ * Die Klasse stellt eine Positon auf einem Schachfeld dar
  */
 public class Position {
     final private int MAX_VALID = 8;

@@ -1,6 +1,3 @@
-/**
- * Created by michael on 10.12.2016.
- */
 public class TestChess {
     public static void main(String[] args) {
         //Test eines Turms

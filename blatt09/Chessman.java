@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 
 /**
- * Created by michael on 09.12.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
+ * Die abstrakte Klasse stellt eine Schachfigur dar
  */
 public abstract class Chessman {
     private Position position;
@@ -38,7 +42,6 @@ public abstract class Chessman {
             throw new RuntimeException("Feld kann nicht in einem Zug erreicht werden");
         position = pos;
     }
-
 
     /**
      * Gibt die Liste der Positionen zurueck, die mit der Figur in einem Zug erreicht werden koennen.

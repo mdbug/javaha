@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 
 /**
- * Created by michael on 10.12.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
+ * Die Klasse stellt die Schachfigur Springer dar.
  */
 public class Knight extends Chessman {
     final static private int[][] MOVES = {
