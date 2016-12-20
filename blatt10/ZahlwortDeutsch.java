@@ -1,5 +1,9 @@
 /**
- * Created by abraining on 14.12.2016.
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
+ * Die abstrakte Klasse stellt eine Zahl in deutscher Sprache dar
  */
 public class ZahlwortDeutsch extends Zahlwort{
     /**

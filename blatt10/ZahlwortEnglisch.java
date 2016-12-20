@@ -1,5 +1,9 @@
-/**
- * Created by micha on 15.12.2016.
+ /**
+ * @author Michael von Bothmer
+ * @author Andreas Braining
+ * @author Richard Deterer
+ *
+ * Die abstrakte Klasse stellt eine Zahl in englischer Sprache dar
  */
 public class ZahlwortEnglisch extends Zahlwort {
     private static final String[] N_0_20 = {
@@ -11,10 +15,19 @@ public class ZahlwortEnglisch extends Zahlwort {
             "", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
     };
 
+
+     /**
+      * Konstruiert ein neues englisches Zahlwort
+      * @param x die Zahl (muss zwischen 1 und 9999 liegen.
+      */
     public ZahlwortEnglisch(int x) {
         super(x);
     }
 
+     /**
+      * Gibt die Zahl als Wort in englglischer Sprache zurueck
+      * @return ein String mit der Zahl in englischer Sprache
+      */
     @Override
     public String getWortString() {
         int n = x;
@@ -51,25 +64,12 @@ public class ZahlwortEnglisch extends Zahlwort {
         return sb.toString();
     }
 
+     /**
+      * Gibt die Sprache dieses Zahlwortes zurueck
+      * @return die Sprache
+      */
     @Override
     public String getSprache() {
         return "englisch";
-    }
-
-    public static void main(String[] args) {
-        //int[] testtabelle = new int[9999];
-        //for (int i=0; i < testtabelle.length; ++i)
-        //    testtabelle[i] = i+1;
-
-        int[] testtabelle = { 10, 11, 12, 13, 15, 18, 20, 35, 51, 80, 103, 1067};
-        for (int zahl: testtabelle) {
-            try {
-                ZahlwortEnglisch zahlwort = new ZahlwortEnglisch(zahl);
-                System.out.println(zahlwort);
-            }
-            catch (NumberFormatException ex) {
-                System.out.println(ex);
-            }
-        }
     }
 }

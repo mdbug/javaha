@@ -1,6 +1,3 @@
-/**
- * Created by micha on 15.12.2016.
- */
 public abstract class Zahlwort {
     protected int x;
     public Zahlwort(int x) {
