@@ -3,12 +3,12 @@
  */
 public class ZahlwortEnglisch extends Zahlwort {
     private static final String[] N_0_20 = {
-            "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+            "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
             "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"
     };
 
     private static final String[] T = {
-            "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
+            "", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
     };
 
     public ZahlwortEnglisch(int x) {
@@ -17,21 +17,38 @@ public class ZahlwortEnglisch extends Zahlwort {
 
     @Override
     public String getWortString() {
-        if (x < 0 || x > 9999)
+        int n = x;
+        if (n < 1 || n > 9999)
             throw new NumberFormatException();
 
-        StringBuilder sb = new
+        StringBuilder sb = new StringBuilder();
 
-
-        if (x <= 20) {
-            return N_0_20[x];
-        } else {
-            if (x % 10 == 0) {
-                return T[(x / 10) - 2];
-            } else {
-                return T[(x / 10) - 2] + "-" + N_0_20[x % 10];
+        if (n >= 1000) {
+            sb.append(N_0_20[n / 1000]).append(" thousand");
+            n %= 1000;
+            if (n > 0) {
+                sb.append(" ");
             }
         }
+
+        if (n >= 100 && n < 1000) {
+            sb.append(N_0_20[n / 100]).append(" hundred");
+            n %= 100;
+            if (n > 0) {
+                sb.append(" and ");
+            }
+        }
+
+        if (n <= 20) {
+            sb.append(N_0_20[n]);
+        } else if (n < 100) {
+            sb.append(T[n / 10]);
+            if (n % 10 != 0) {
+                 sb.append("-").append(N_0_20[n % 10]);
+            }
+        }
+
+        return sb.toString();
     }
 
     @Override
@@ -40,6 +57,10 @@ public class ZahlwortEnglisch extends Zahlwort {
     }
 
     public static void main(String[] args) {
+        //int[] testtabelle = new int[9999];
+        //for (int i=0; i < testtabelle.length; ++i)
+        //    testtabelle[i] = i+1;
+
         int[] testtabelle = { 10, 11, 12, 13, 15, 18, 20, 35, 51, 80, 103, 1067};
         for (int zahl: testtabelle) {
             try {
