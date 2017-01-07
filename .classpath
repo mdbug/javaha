@@ -12,5 +12,6 @@
 	<classpathentry kind="src" path="blatt09"/>
 	<classpathentry kind="src" path="blatt10"/>
 	<classpathentry kind="src" path="blatt11"/>
+	<classpathentry kind="src" path="blatt12"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
