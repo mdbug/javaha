@@ -7,8 +7,17 @@ import java.util.TreeMap;
  * @author Michael von Bothmer
  * @author Andreas Braining
  * @author Richard Deterer
+ *
+ * Die Klasse ist dazu da, einen Text zu entschluesseln, der zuvor mittels Huffman-Codierung verschluesselt wurde.
  */
 public class Huffman {
+    /**
+     * Die Funktion entschluesselt einen Text in einer Datei
+     *
+     * @param f die Datei die entschluesselt werden soll
+     * @return den entschluesselten Text
+     * @throws FileNotFoundException falls die Datai nicht gefunden wurde
+     */
     public static String decode (File f) throws FileNotFoundException {
         Scanner scanner = new Scanner(f);
         if (!scanner.hasNextLine())
@@ -47,7 +56,7 @@ public class Huffman {
 
     public static void main(String[] args) {
         try {
-            System.out.println(Huffman.decode(new File("blatt12/message.txt")));
+            System.out.println(Huffman.decode(new File("message.txt")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
